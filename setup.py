@@ -11,7 +11,7 @@ setuptools.setup(
     version="0.0.1",
     author=USER_NAME,
     author_email="agarwalrashi543212gmail.com",
-    description="Its an iplemetation of perceptron",
+    description="Its an modular implemetation of multilevel perceptron",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{USER_NAME}/{PROJECT_NAME}",
