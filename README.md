@@ -11,4 +11,5 @@ conda create --prefix ./envs python=3.7 -y
 conda activate ./envs
 
 # References
-Conda env commands  
+
+* [Conda env commands] (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) 
