@@ -7,7 +7,7 @@ PROJECT_NAME="modular_ann_implimentation_12"
 USER_NAME="rasshiagarwala33"    
 
 setuptools.setup(
-    name=f"{PROJECT_NAME}-{USER_NAME}",
+    name="src",
     version="0.0.1",
     author=USER_NAME,
     author_email="agarwalrashi543212gmail.com",

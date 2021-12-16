@@ -11,7 +11,10 @@ def training(config_path):
     OPTIMIZER=config["params"]["optimizers"]
     METRICS=config["params"]["metrics"]
     NUM_CLASSES=config["params"]["no_of_classes "]
+    EPOCHS=config["params"]["epochs"]
+    VALIDATION_SET=(X_valid,y_valid)
     model=create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASSES)
+    history=model.fit(X_train,y_train,epochs=EPOCHS,validation_set=VALIDATION_SET)
 
 if __name__ == '__main__':
     args=argparse.ArgumentParser()
