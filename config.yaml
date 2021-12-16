@@ -3,7 +3,7 @@
 params:
   epochs: 30
   batch_size : 32
-  no_of_classes : 10  
+  num_class : 10  
   input_shape : [28,28] 
   loss_function : sparse_categorical_crossentropy
   metrics : accuracy

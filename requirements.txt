@@ -4,3 +4,6 @@ matplotlib
 seaborn
 pandas 
 PyYAML
+
+# Local package installation 
+-e . ###<<< To install local packages mentioned in setup.py

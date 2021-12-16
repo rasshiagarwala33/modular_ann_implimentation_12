@@ -9,5 +9,5 @@ def create_model(LOSS_FUNCTION, OPTIMIZER, METRICS, NUM_CLASSES):
     ]
     model_clf=tf.keras.models.Sequential(LAYERS)
     model_clf.summary()
-    model_clf.compile(loss=LOSS_FUNCTION,optimizers=OPTIMIZER,metrics=METRICS)
+    model_clf.compile(loss=LOSS_FUNCTION,optimizer=OPTIMIZER,metrics=METRICS)
     return model_clf
