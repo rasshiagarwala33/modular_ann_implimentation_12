@@ -1,11 +1,17 @@
 from src.utils.common import read_config
 from src.utils.data_mngnt import get_data
+from src.utils.model import create_model
 import argparse
 
 
 def training(config_path):
     config=read_config(config_path)
     validation_datasize=config["params"]["validation_datasize"]
+    LOSS_FUNCTION=config["params"]["loss_function"]
+    OPTIMIZER=config["params"]["optimizers"]
+    METRICS=config["params"]["metrics"]
+    NUM_CLASSES=config["params"]["no_of_classes "]
+    model=create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASSES)
 
 if __name__ == '__main__':
     args=argparse.ArgumentParser()
