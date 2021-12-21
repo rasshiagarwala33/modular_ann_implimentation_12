@@ -1,25 +1,26 @@
 #This would store all the parameters 
 
 params:
-  epochs: 30
+  epochs: 1
   batch_size : 32
   num_class : 10  
   input_shape : [28,28] 
   loss_function : sparse_categorical_crossentropy
   metrics : accuracy
   optimizer : SGD
-  validation_datasize : 5000
+  validation_datasize : 5000 
+  patience : 5
+  restore_best_weights : True
   
-
 artifacts:
   artifacts_dir: artifacts
   model_dir: model
   plots_dir: plots
-  checkpoint_dir: checkpoints
   model_name: model.h5
   plot_name : plots.png
-      
+  CHECKPOINTS_DIR : checkpoints
+
 logs:
   logs_dir: logs_dir
   general_logs: general_logs
-  tensorboard_logs: tensorboard_logs
+  TENSORBOARD_ROOT_LOG_DIR: tensorboard_logs

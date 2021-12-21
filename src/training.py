@@ -26,9 +26,10 @@ def training(config_path):
     os.makedirs(plot_path_dir,exist_ok=True)
     EPOCHS=config["params"]["epochs"]
     VALIDATION_SET=(X_valid,y_valid)
+    # create callbacks
     CALLBACK_LIST= get_callback_list(config,X_train)
     model=create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASSES)
-    history=model.fit(X_train,y_train,epochs=EPOCHS,validation_data=VALIDATION_SET)
+    history=model.fit(X_train,y_train,epochs=EPOCHS,validation_data=VALIDATION_SET,callbacks=CALLBACK_LIST)
     save_model(model,model_name,model_path_dir)
     save_plot(pd.DataFrame(history.history),plot_name,plot_path_dir)
 
