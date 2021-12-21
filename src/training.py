@@ -1,5 +1,6 @@
 from src.utils.common import read_config
-from src.utils.data_mngnt import get_data
+from src.utils.data_mngnt import get_data 
+from src.utils.callbacks import get_callback_list
 import pandas as pd 
 from src.utils.model import create_model,save_model,save_plot
 import argparse
@@ -25,6 +26,7 @@ def training(config_path):
     os.makedirs(plot_path_dir,exist_ok=True)
     EPOCHS=config["params"]["epochs"]
     VALIDATION_SET=(X_valid,y_valid)
+    CALLBACK_LIST= get_callback_list(config,X_train)
     model=create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASSES)
     history=model.fit(X_train,y_train,epochs=EPOCHS,validation_data=VALIDATION_SET)
     save_model(model,model_name,model_path_dir)
