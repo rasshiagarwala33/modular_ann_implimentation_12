@@ -5,7 +5,7 @@ import time
 
 def get_timestamp(name):
     timestamp=time.asctime().replace(" ","_").replace(":","_")
-    unique_name=f"{name}_{timestamp}"
+    unique_name=f"{name}_at_{timestamp}"
     return unique_name
 
 def get_callback_list(config,X_train):
